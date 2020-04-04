@@ -18,8 +18,12 @@ The `urlpatterns` list routes URLs to views. For more information please see:
 from django.contrib import admin
 from django.urls import path, include
 
+from insta.views import SignUp
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('insta.urls')),
-    path('auth/', include('django.contrib.auth.urls'))
+    path('auth/', include('django.contrib.auth.urls')),
+    path('auth/signup/', SignUp.as_view(), name='signup')
+
 ]
