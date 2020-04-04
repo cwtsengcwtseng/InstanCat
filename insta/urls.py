@@ -18,6 +18,7 @@ from django.urls import include, path
 from insta.views import (Helloworld, PostView, PostDetailView, PostCreateView,
         PostUpdateView, PostDeleteView)
 
+
 urlpatterns = [
     path('ig/', Helloworld.as_view(), name='helloworld'),
     path('posts/', PostView.as_view(), name='posts'),
