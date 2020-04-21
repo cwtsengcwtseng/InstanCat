@@ -1,0 +1,32 @@
+<html>
+    <head>
+        {% load static %}
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Cat Insta</title>
+        <link href="{% static 'vender/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+        <link href="{% static 'vender/font-awesome-4.6.3/css/font-awesome.min.css' %}" rel="stylesheet">
+        <link href="{% static 'css/mystyle.css' %}" rel="stylesheet">
+    </head>
+    <body>
+
+        {% load static %}
+        {% include 'header.html' %}
+        
+        <div class="content-wrapper">
+            <div class="container">
+                {% block content %}
+                {% endblock content%}
+            </div>
+        </div>
+
+        <script type="text/javascript" src="{% static 'js/jquery-3.1.0.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'vender/bootstrap/js/bootstrap.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/ajax-csrf-auth.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/index.js' %}"></script>
+
+        {% block extrascript %}
+        {% endblock %}
+
+    </body>
+</html>
